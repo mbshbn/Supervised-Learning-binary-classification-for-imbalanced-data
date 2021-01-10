@@ -4,7 +4,7 @@ This project is part of the CharityML project for [the Udacity course: Intro to 
 
 
 ### Goal
-Classify people based on the features explained below, to predict their income class, either above 50K or below 50K. This can be used to identigy possible donors to a charity. 
+Classify people based on the features explained below, to predict their income class, either above 50K or below 50K. This can be used to identify possible donors to a charity. 
 ### Data
 The modified census dataset consists of approximately 32,000 data points, with each datapoint having 13 features. This dataset is a modified version of the dataset published in the paper *"Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid",* by Ron Kohavi. You may find this paper [online](https://www.aaai.org/Papers/KDD/1996/KDD96-033.pdf), with the original dataset hosted on [UCI](https://archive.ics.uci.edu/ml/datasets/Census+Income).
 
@@ -115,8 +115,9 @@ sns.countplot(data['income'] )
                                                     random_state = 42)
     ```
 3. Training and Predicting
-   1. Useing fbeta_score and accuracy_score from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, fbeta_score
+   1. Useing fbeta_score and accuracy_score from sklearn.metrics 
    ```
+   import accuracy_score, precision_score, recall_score, f1_score, fbeta_score
    def train_predict(learner, sample_size, X_train, y_train, X_test, y_test): 
     results = {}
     # Fit the learner to the training data using slicing with 'sample_size' 
